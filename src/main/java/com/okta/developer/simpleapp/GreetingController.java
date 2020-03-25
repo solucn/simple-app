@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreetingController {
 
-
     @GetMapping("/greeting")
-    public String greet(@AuthenticationPrincipal OidcUser user){
+    public String greet(@AuthenticationPrincipal OidcUser user) {
         return "Hello " + user.getEmail();
     }
 }
